@@ -24,7 +24,7 @@ export default class TarefaAtuacao {
     }) => {
 
         if(!EmailValidator.validate(dados.email)) {
-            throw 'E-mail inválido';
+            // throw 'E-mail inválido';
         }
         
         return await sequelize.query(`CALL saipos.inserirTarefa($descricao, $nome, $email)`, {
